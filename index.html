@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donut Heaven</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-blue-100 to-purple-100 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-purple-700 text-white p-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">🍩 Yummy Donut Palace</h1>
+
+
+      <!-- Mobile menu button -->
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- Nav links -->
+      <nav id="menu" class="hidden md:flex space-x-4">
+        <a href="#" class="hover:underline">Home</a>
+        <a href="#" class="hover:underline">Menu</a>
+        <a href="#" class="hover:underline">About</a>
+        <a href="#" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+<main class="flex-grow px-4">
+  <!-- Hero Section -->
+  <section class="text-center max-w-4xl mx-auto px-4 py-16">
+    <img
+      src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+      alt="Delicious donuts"
+      class="mx-auto rounded-lg shadow-lg mb-6 w-full max-w-md"
+    />
+    <h2 class="text-5xl font-extrabold text-purple-800 mb-4">
+      Welcome to Yummy Donut Palace 🍩
+    </h2>
+    <p class="text-lg text-gray-700 mb-8">
+      Serving sweet mornings in Independence, MO — one donut at a time.
+    </p>
+    <a href="#menu" class="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold shadow hover:bg-yellow-300 transition">
+      View Menu
+    </a>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-16 bg-white text-gray-800">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h3 class="text-4xl font-bold text-purple-700 mb-8">Our Menu</h3>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Menu item -->
+        <div class="bg-purple-100 rounded-xl p-4 shadow">
+          <h4 class="text-xl font-semibold mb-2">Glazed Donut</h4>
+          <p class="text-gray-600">$1.29</p>
+        </div>
+
+        <div class="bg-purple-100 rounded-xl p-4 shadow">
+          <h4 class="text-xl font-semibold mb-2">Chocolate Long John</h4>
+          <p class="text-gray-600">$1.49</p>
+        </div>
+
+        <div class="bg-purple-100 rounded-xl p-4 shadow">
+          <h4 class="text-xl font-semibold mb-2">Strawberry Sprinkle</h4>
+          <p class="text-gray-600">$1.39</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <!-- Footer -->
+  <footer class="bg-purple-700 text-white p-4 text-center">
+    <p>Open Daily • 7am - 5pm • 123 Main St, Independence, MO</p>
+  </footer>
+
+  <!-- Mobile menu toggle script -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
