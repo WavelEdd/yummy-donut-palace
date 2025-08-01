@@ -1,106 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yummy Donut Palace</title>
-  
   <style>
-    html {
-      scroll-behavior: smooth;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fdf6ff;
+      color: #333;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+      height: 400px;
+    }
+
+    .slide {
+      display: none;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 300px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .order-button {
+      background-color: #6b46c1;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .order-button:hover {
+      background-color: #553c9a;
+    }
+
+    footer {
+      background-color: #eee;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
     }
   </style>
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-b from-blue-100 to-purple-100 min-h-screen flex flex-col">
+<body>
 
-  <!-- Header -->
-  <header class="bg-purple-700 text-white p-4 shadow-md">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">🍩 Yummy Donut Palace</h1>
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="slide"><img src="images/donut1.jpg" alt="Donut 1"></div>
+    <div class="slide"><img src="images/donut2.jpg" alt="Donut 2"></div>
+    <div class="slide"><img src="images/donut3.jpg" alt="Donut 3"></div>
+  </div>
 
-      <!-- Mobile menu button -->
-      <button id="menu-btn" class="md:hidden focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
+  <!-- About Us -->
+  <div class="section" id="about">
+    <h2>About Yummy Donut Palace</h2>
+    <p>We are a family-owned donut shop bringing sweet joy to the heart of Independence, MO. From classic glazes to crazy creations, we bake with love and serve with smiles.</p>
+  </div>
 
-      <!-- Nav links -->
-      <nav id="menu" class="hidden md:flex space-x-4">
-        <a href="#home" class="hover:underline">Home</a>
-        <a href="menu.html" class="hover:underline">Menu</a>
-        <a href="#about-us" class="hover:underline">About</a>
-        <a href="#contact" class="hover:underline">Contact</a>
-      </nav>
+  <!-- Location Map -->
+  <div class="section" id="location">
+    <h2>Find Us</h2>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.1831736768565!2d-94.4155076846442!3d39.091095179543225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0fdf2a2db67bb%3A0xe3beccf5400d2a30!2sIndependence%2C%20MO!5e0!3m2!1sen!2sus!4v1615133728467"
+        allowfullscreen="" loading="lazy"></iframe>
     </div>
-  </header>
+  </div>
 
-  <!-- Hero Section -->
-  <main class="flex-grow px-4" id="home">
-    <section class="text-center max-w-4xl mx-auto px-4 py-16">
-      <img
-        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
-        alt="Delicious donuts"
-        class="mx-auto rounded-lg shadow-lg mb-6 w-full max-w-md"
-      />
-      <h2 class="text-5xl font-extrabold text-purple-800 mb-4">
-        Welcome to Yummy Donut Palace 🍩
-      </h2>
-      <p class="text-lg text-gray-700 mb-8">
-        Serving sweet mornings in Independence, MO — one donut at a time.
-      </p>
-      <!-- Removed View Menu button since no menu -->
-    </section>
+  <!-- Order Online -->
+  <div class="section" id="order">
+    <h2>Ready to Order?</h2>
+    <button class="order-button" onclick="window.location.href='order.html'">Order Online</button>
+  </div>
 
-    <!-- About Us Section -->
-    <section id="about-us" class="about-us max-w-4xl mx-auto px-4 py-8">
-      <h2 class="text-3xl font-bold mb-4">About Us</h2>
-      <p class="mb-2">
-        Welcome to Yummy Donut Palace! We are a family-owned donut shop dedicated to bringing you the freshest and most delicious donuts in town. Our passion is creating sweet moments for every customer who walks through our doors.
-      </p>
-      <p>
-        Since our founding, we’ve focused on quality, community, and smiles—one donut at a time.
-      </p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact max-w-4xl mx-auto px-4 py-8">
-      <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-      <p class="mb-4">Have questions or want to place a special order? Reach out!</p>
-      <ul class="mb-4 list-disc list-inside">
-        <li><strong>Phone:</strong> (816) 503-8299</li>
-        <li><strong>Email:</strong> info@yummydonutpalace.com</li>
-        <li><strong>Address:</strong> Yummy Donut Palace, Independence, MO 64057</li>
-      </ul>
-      <form action="mailto:info@yummydonutpalace.com" method="post" enctype="text/plain" class="flex flex-col max-w-md">
-        <label for="name" class="mb-1 font-semibold">Name:</label>
-        <input type="text" id="name" name="name" required class="mb-4 p-2 border rounded" />
-        <label for="email" class="mb-1 font-semibold">Email:</label>
-        <input type="email" id="email" name="email" required class="mb-4 p-2 border rounded" />
-        <label for="message" class="mb-1 font-semibold">Message:</label>
-        <textarea id="message" name="message" rows="4" required class="mb-4 p-2 border rounded"></textarea>
-        <button type="submit" class="bg-purple-700 text-white py-2 rounded hover:bg-purple-800 transition">Send</button>
-      </form>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-purple-700 text-white p-4 text-center">
-    <p>Open Daily • 7am - 5pm • 123 Main St, Independence, MO</p>
+  <!-- Contact Info -->
+  <footer>
+    <p>Contact us: yummy.donut.palace@gmail.com | (555) 123-4567</p>
+    <p>123 Donut Street, Independence, MO 64050</p>
+    <p>&copy; 2025 Yummy Donut Palace</p>
   </footer>
 
-  <!-- Mobile menu toggle script -->
   <script>
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
+    let slideIndex = 0;
+    showSlides();
 
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
+    function showSlides() {
+      let i;
+      const slides = document.getElementsByClassName("slide");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change every 3 seconds
+    }
   </script>
 
 </body>
