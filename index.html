@@ -1,55 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yummy Donut Palace</title>
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     body {
-      background-color: #fdf6ff;
+      background-color: #fef9f3;
       color: #333;
     }
 
-    .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
-      height: 400px;
+    nav {
+      background-color: #3f3f3f;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    .slide {
-      display: none;
-      height: 100%;
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 30px;
     }
 
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    .section {
-      padding: 50px 20px;
+    .hero {
+      background: url('images/donut1.jpg') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
       text-align: center;
     }
 
-    .map-container {
-      width: 100%;
-      height: 300px;
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
     }
 
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
     }
 
     .order-button {
@@ -60,77 +69,75 @@
       font-size: 18px;
       border-radius: 8px;
       cursor: pointer;
-      margin-top: 20px;
       transition: background-color 0.3s;
+      margin-top: 20px;
     }
 
     .order-button:hover {
-      background-color: #553c9a;
+      background-color: #4c3399;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
     }
 
     footer {
-      background-color: #eee;
-      padding: 20px;
+      background-color: #333;
+      color: #ccc;
       text-align: center;
-      font-size: 14px;
+      padding: 30px 20px;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Slideshow -->
-  <div class="slideshow-container">
-    <div class="slide"><img src="images/donut1.jpg" alt="Donut 1"></div>
-    <div class="slide"><img src="images/donut2.jpg" alt="Donut 2"></div>
-    <div class="slide"><img src="images/donut3.jpg" alt="Donut 3"></div>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Image -->
+  <div class="hero">
+    <div>
+      <h1>Yummy Donut Palace</h1>
+      <p>Fresh. Local. Legendary.</p>
+    </div>
   </div>
 
-  <!-- About Us -->
+  <!-- About Section -->
   <div class="section" id="about">
-    <h2>About Yummy Donut Palace</h2>
-    <p>We are a family-owned donut shop bringing sweet joy to the heart of Independence, MO. From classic glazes to crazy creations, we bake with love and serve with smiles.</p>
+    <h2>About Us</h2>
+    <p>We're a family-run donut shop in Independence, MO serving up hot, fresh donuts every morning. We do it for the love of flavor and community.</p>
   </div>
 
-  <!-- Location Map -->
+  <!-- Location -->
   <div class="section" id="location">
-    <h2>Find Us</h2>
+    <h2>Visit Us</h2>
     <div class="map-container">
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.1831736768565!2d-94.4155076846442!3d39.091095179543225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0fdf2a2db67bb%3A0xe3beccf5400d2a30!2sIndependence%2C%20MO!5e0!3m2!1sen!2sus!4v1615133728467"
         allowfullscreen="" loading="lazy"></iframe>
     </div>
-  </div>
-
-  <!-- Order Online -->
-  <div class="section" id="order">
-    <h2>Ready to Order?</h2>
     <button class="order-button" onclick="window.location.href='order.html'">Order Online</button>
   </div>
 
-  <!-- Contact Info -->
-  <footer>
+  <!-- Contact -->
+  <footer id="contact">
     <p>Contact us: yummy.donut.palace@gmail.com | (555) 123-4567</p>
     <p>123 Donut Street, Independence, MO 64050</p>
     <p>&copy; 2025 Yummy Donut Palace</p>
   </footer>
 
-  <script>
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-      let i;
-      const slides = document.getElementsByClassName("slide");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 3000); // Change every 3 seconds
-    }
-  </script>
-
 </body>
 </html>
+
 
