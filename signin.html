@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign In – Yummy Donut Palace</title>
+  <title>Sign Up – Yummy Donut Palace</title>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <script>
     function handleCredentialResponse(response) {
@@ -29,18 +29,18 @@
 <body class="bg-purple-200 min-h-screen flex items-center justify-center">
 
   <div class="bg-white p-8 rounded-xl shadow-xl w-full max-w-md text-center">
-    <h1 class="text-2xl font-bold mb-6 text-purple-800">Sign In to Yummy Donut Palace</h1>
+    <h1 class="text-2xl font-bold mb-6 text-purple-800">Create Your Donut Account</h1>
 
-    <!-- Email/Password Login Form -->
-    <form class="space-y-4 mb-4" onsubmit="handleFormSignIn(event)">
+    <!-- Email/Password Sign Up Form -->
+    <form class="space-y-4 mb-4" onsubmit="handleFormSignUp(event)">
       <input type="email" placeholder="Email" class="w-full px-4 py-2 border rounded-md" required />
       <input type="password" placeholder="Password" class="w-full px-4 py-2 border rounded-md" required />
       <button type="submit" class="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition">
-        Log In
+        Sign Up
       </button>
     </form>
 
-    <p class="text-sm mb-4">Don't have an account? <a href="signup.html" class="text-purple-700 underline">Sign up here</a></p>
+    <p class="text-sm mb-4">Already signed up? <a href="signin.html" class="text-purple-700 underline">Log in here</a></p>
 
     <!-- Divider -->
     <div class="relative my-4">
@@ -52,10 +52,10 @@
       </div>
     </div>
 
-    <!-- Google Sign-In Button -->
+    <!-- Google Sign-Up Button -->
     <div id="g_id_onload"
          data-client_id="808931447064-jqu4mbtffuglk8h2ua5941nhh8gc391n.apps.googleusercontent.com"
-         data-context="signin"
+         data-context="signup"
          data-callback="handleCredentialResponse"
          data-auto_prompt="false">
     </div>
@@ -63,7 +63,7 @@
     <div class="g_id_signin"
          data-type="standard"
          data-shape="pill"
-         data-theme="filled_blue"
+         data-theme="outline"
          data-text="continue_with"
          data-size="large"
          data-logo_alignment="left">
@@ -71,12 +71,12 @@
   </div>
 
   <script>
-    function handleFormSignIn(event) {
+    function handleFormSignUp(event) {
       event.preventDefault();
       const email = event.target[0].value;
       const password = event.target[1].value;
 
-      // Simple check — this is just for demo purposes. Add backend logic later!
+      // Simulate signup (no backend yet)
       if (email === "eddisoning33@gmail.com") {
         window.location.href = "admin.html";
       } else {
