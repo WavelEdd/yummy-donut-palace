@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel - Yummy Donut Palace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-purple-100 min-h-screen text-gray-900">
+
+  <header class="bg-purple-700 text-white p-4 shadow">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Admin Panel</h1>
+      <a href="index.html" class="hover:underline">Back to Site</a>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6 space-y-12">
+
+    <!-- Manage Menu Items Section -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4 text-purple-700">Manage Menu Items</h2>
+
+      <!-- Add/Edit form -->
+      <form id="itemForm" class="mb-6 max-w-md space-y-4">
+        <input type="hidden" id="editIndex" value="-1" />
+        <div>
+          <label for="itemName" class="block font-medium">Item Name:</label>
+          <input type="text" id="itemName" class="w-full p-2 border rounded" required />
+        </div>
+        <div>
+          <label for="itemPrice" class="block font-medium">Price ($):</label>
+          <input type="number" id="itemPrice" min="0" step="0.01" class="w-full p-2 border rounded" required />
+        </div>
+        <div>
+          <label for="itemPoints" class="block font-medium">Points Earned:</label>
+          <input type="number" id="itemPoints" min="0" step="1" class="w-full p-2 border rounded" value="0" required />
+        </div>
+        <button type="submit" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700" id="formSubmitBtn">Add Item</button>
+        <button type="button" id="cancelEditBtn" class="hidden ml-4 px-4 py-2 border rounded hover:bg-gray-200">Cancel Edit</button>
+      </form>
+
+      <!-- Menu items list -->
+      <ul id="menuItemsList" class="space-y-3">
+        <!-- Menu items go here -->
+      </ul>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4 text-purple-700">Manage Store Locations</h2>
+      <p class="mb-4">Add or remove store locations (pins on map). Coming soon!</p>
+      <button disabled class="bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed">Manage Locations (Coming Soon)</button>
+    </section>
+
+    <!-- Payments Section -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4 text-purple-700">Manage Payments & Orders</h2>
+      <p class="mb-4">View and manage orders and payment settings. Coming soon!</p>
+      <button disabled class="bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed">Manage Payments (Coming Soon)</button>
+    </section>
+
+  </main>
+
+  <script>
+    const itemForm = document.getElementById('itemForm');
+    const menuItemsList = document.getElementById('menuItemsList');
+    const editIndexInput = document.getElementById('editIndex');
+    const formSubmitBtn = document.getElementById('formSubmitBtn');
+    const cancelEditBtn = document.getElementById('cancelEditBtn');
+
+    // Load menu items from localStorage or start empty
+    let menuItems = JSON.parse(localStorage.getItem('menuItems')) || [];
+
+    function renderMenuItems() {
+      menuItemsList.innerHTML = '';
+
+      if (menuItems.length === 0) {
+        menuItemsList.innerHTML = '<p class="text-gray-500">No menu items yet.</p>';
+        return;
+      }
+
+      menuItems.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.className = 'flex justify-between items-center bg-purple-50 p-3 rounded';
+
+        li.innerHTML = `
+          <div>
+            <span class="font-semibold">${item.name}</span> — $${parseFloat(item.price).toFixed(2)} — <span class="text-purple-600 font-medium">${item.points} pts</span>
+          </div>
+          <div class="space-x-2">
+            <button onclick="editItem(${index})" class="text-blue-600 hover:underline">Edit</button>
+            <button onclick="deleteItem(${index})" class="text-red-600 hover:underline">Delete</button>
+          </div>
+        `;
+
+        menuItemsList.appendChild(li);
+      });
+    }
+
+    function saveMenuItems() {
+      localStorage.setItem('menuItems', JSON.stringify(menuItems));
+      renderMenuItems();
+    }
+
+    function editItem(index) {
+      const item = menuItems[index];
+      editIndexInput.value = index;
+      document.getElementById('itemName').value = item.name;
+      document.getElementById('itemPrice').value = item.price;
+      document.getElementById('itemPoints').value = item.points;
+
+      formSubmitBtn.textContent = 'Update Item';
+      cancelEditBtn.classList.remove('hidden');
+    }
+
+    function deleteItem(index) {
+      if (confirm(`Delete "${menuItems[index].name}"?`)) {
+        menuItems.splice(index, 1);
+        saveMenuItems();
+        resetForm();
+      }
+    }
+
+    function resetForm() {
+      editIndexInput.value = -1;
+      itemForm.reset();
+      formSubmitBtn.textContent = 'Add Item';
+      cancelEditBtn.classList.add('hidden');
+    }
+
+    cancelEditBtn.addEventListener('click', () => {
+      resetForm();
+    });
+
+    itemForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('itemName').value.trim();
+      const price = parseFloat(document.getElementById('itemPrice').value).toFixed(2);
+      const points = parseInt(document.getElementById('itemPoints').value);
+
+      if (!name || isNaN(price) || isNaN(points)) {
+        alert('Please enter valid values.');
+        return;
+      }
+
+      const index = parseInt(editIndexInput.value);
+
+      if (index >= 0) {
+        // Update existing item
+        menuItems[index] = { name, price, points };
+      } else {
+        // Add new item
+        menuItems.push({ name, price, points });
+      }
+
+      saveMenuItems();
+      resetForm();
+    });
+
+    // Initial render on page load
+    renderMenuItems();
+  </script>
+</body>
+</html>
 
