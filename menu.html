@@ -1,312 +1,93 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Menu | Yummy Donut Palace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu - Yummy Donut Palace</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
-<body class="bg-purple-50 text-gray-800">
-
+<body class="bg-gray-50 text-gray-800">
   <!-- Navigation -->
-  <nav class="bg-purple-600 sticky top-0 z-50 text-white shadow-md">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
-      <a href="index.html" class="font-bold text-xl hover:text-yellow-400">Home</a>
-      <div class="space-x-6">
-        <a href="#breakfast" class="hover:text-yellow-400">Breakfast</a>
-        <a href="#donuts" class="hover:text-yellow-400">Donuts</a>
-        <a href="#drinks" class="hover:text-yellow-400">Drinks</a>
-      </div>
-    </div>
+  <nav class="bg-purple-800 text-white p-4 text-center text-xl font-semibold">
+    <a href="/" class="hover:underline">Home</a> • 
+    <a href="/menu.html" class="hover:underline font-bold">Menu</a> • 
+    <a href="/merch.html" class="hover:underline">Merch</a> • 
+    <a href="/location.html" class="hover:underline">Location</a> • 
+    <a href="/contact.html" class="hover:underline">Contact</a>
   </nav>
 
-  <main class="p-6 space-y-16 max-w-7xl mx-auto">
+  <!-- Google Maps Embed -->
+  <section class="max-w-6xl mx-auto px-4 py-6">
+    <h2 class="text-2xl font-bold text-purple-700 mb-4">📍 Pickup Location</h2>
+    <div class="aspect-w-16 aspect-h-9">
+      <iframe
+        class="w-full h-96 rounded-xl shadow"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.0247138501446!2d-94.415506!3d39.091116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f87be299a3a9%3A0x3c2f4a75f2f7cdeb!2sYummy%20Donut%20Palace!5e0!3m2!1sen!2sus!4v1691079800000!5m2!1sen!2sus"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
 
-    <!-- Breakfast Section -->
-    <section id="breakfast">
-      <h2 class="text-3xl font-bold text-purple-700 mb-6">Breakfast</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/croissant_bacon.jpg" alt="Croissant Sandwich (Bacon)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Croissant Sandwich (Bacon)</h3>
-          <p class="text-gray-600 mb-2">Flaky croissant with crispy bacon</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/croissant_sausage.jpg" alt="Croissant Sandwich (Sausage)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Croissant Sandwich (Sausage)</h3>
-          <p class="text-gray-600 mb-2">Flaky croissant with savory sausage</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/croissant_ham.jpg" alt="Croissant Sandwich (Ham)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Croissant Sandwich (Ham)</h3>
-          <p class="text-gray-600 mb-2">Flaky croissant with sliced ham</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/croissant_turkey.jpg" alt="Croissant Sandwich (Turkey)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Croissant Sandwich (Turkey)</h3>
-          <p class="text-gray-600 mb-2">Flaky croissant with turkey slices</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/burrito_bacon.jpg" alt="Burrito (Bacon)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Burrito (Bacon)</h3>
-          <p class="text-gray-600 mb-2">Breakfast burrito with crispy bacon</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-        
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/burrito_sausage.jpg" alt="Burrito (Sausage)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Burrito (Sausage)</h3>
-          <p class="text-gray-600 mb-2">Breakfast burrito with savory sausage</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/biscuit_bacon.jpg" alt="Biscuit Sandwich (Bacon)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Biscuit Sandwich (Bacon)</h3>
-          <p class="text-gray-600 mb-2">Fluffy biscuit with crispy bacon</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/biscuit_sausage.jpg" alt="Biscuit Sandwich (Sausage)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Biscuit Sandwich (Sausage)</h3>
-          <p class="text-gray-600 mb-2">Fluffy biscuit with savory sausage</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/bacon_sausage_burger.jpg" alt="Bacon Sausage Burger" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Bacon Sausage Burger</h3>
-          <p class="text-gray-600 mb-2">Special bacon and sausage burger</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/filled_croissant_cherry.jpg" alt="Filled Croissant (Cherry)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Filled Croissant (Cherry)</h3>
-          <p class="text-gray-600 mb-2">Flaky croissant filled with cherry jam</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/sausage_roll_regular.jpg" alt="Sausage Roll (Regular)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Sausage Roll (Regular)</h3>
-          <p class="text-gray-600 mb-2">Classic savory sausage roll</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/sausage_roll_spicy.jpg" alt="Sausage Roll (Spicy)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Sausage Roll (Spicy)</h3>
-          <p class="text-gray-600 mb-2">Spicy twist on a sausage roll</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Donuts Section -->
-    <section id="donuts">
-      <h2 class="text-3xl font-bold text-purple-700 mb-6">Donuts</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/old_fashioned.jpg" alt="Old Fashioned Donut" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Old Fashioned Donut</h3>
-          <p class="text-gray-600 mb-2">Classic and crispy</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/cake_donut.jpg" alt="Cake Donut" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Cake Donut</h3>
-          <p class="text-gray-600 mb-2">Soft and fluffy cake donut</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/blueberry_donut.jpg" alt="Blueberry Donut" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Blueberry Donut</h3>
-          <p class="text-gray-600 mb-2">Blueberry-filled donut with glaze</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/dark_chocolate_cake_donut.jpg" alt="Dark Chocolate Cake Donut" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Dark Chocolate Cake Donut</h3>
-          <p class="text-gray-600 mb-2">Rich chocolate-flavored cake donut</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/long_john.jpg" alt="Long John" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Long John</h3>
-          <p class="text-gray-600 mb-2">Long donut, can be filled or iced</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/glazed_donut.jpg" alt="Glazed Donut" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Glazed Donut</h3>
-          <p class="text-gray-600 mb-2">Sweet glazed classic donut</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <!-- Icing Donuts with sprinkles -->
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/icing_pink.jpg" alt="Icing Donut (Pink)" class="rounded-md mb-3 w-full h-40 object-cover" />
+  <!-- Menu Section Template -->
+  <section class="max-w-6xl mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold text-purple-800 mb-6">🍩 Donuts</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Donut Item Template -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="/images/donut-placeholder.jpg" alt="Donut" class="w-full h-48 object-cover">
+        <div class="p-4">
           <h3 class="text-xl font-semibold">Icing Donut (Pink)</h3>
-          <p class="text-gray-600 mb-2">Pink icing with optional sprinkles</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
+          <p class="text-gray-600 mb-3">Sweet and colorful with optional sprinkles.</p>
+          <p class="font-bold text-purple-700">$1.60</p>
         </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/icing_white.jpg" alt="Icing Donut (White)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Icing Donut (White)</h3>
-          <p class="text-gray-600 mb-2">White icing with optional sprinkles</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/icing_chocolate.jpg" alt="Icing Donut (Chocolate)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Icing Donut (Chocolate)</h3>
-          <p class="text-gray-600 mb-2">Chocolate icing with optional sprinkles</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/bismarck.jpg" alt="Bismarck Donut" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Bismarck Donut (Filled)</h3>
-          <p class="text-gray-600 mb-2">Filled donut, also called Bismarck</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/donut_holes.jpg" alt="Donut Holes" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Donut Holes</h3>
-          <p class="text-gray-600 mb-2">Bite-sized donut holes</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/apple_fritter.jpg" alt="Apple Fritter" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Apple Fritter</h3>
-          <p class="text-gray-600 mb-2">Sweet apple-filled fritter</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <!-- Twist Donuts -->
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/twist_glazed.jpg" alt="Twist Donut (Glazed)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Twist Donut (Glazed)</h3>
-          <p class="text-gray-600 mb-2">Glazed twisted donut</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/twist_cinnamon.jpg" alt="Twist Donut (Cinnamon)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Twist Donut (Cinnamon)</h3>
-          <p class="text-gray-600 mb-2">Cinnamon twisted donut</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/twist_chocolate.jpg" alt="Twist Donut (Chocolate)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Twist Donut (Chocolate)</h3>
-          <p class="text-gray-600 mb-2">Chocolate twisted donut</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/twist_sugar.jpg" alt="Twist Donut (Sugar)" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Twist Donut (Sugar)</h3>
-          <p class="text-gray-600 mb-2">Sugar coated twisted donut</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/cinnamon_roll.jpg" alt="Cinnamon Roll" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Cinnamon Roll</h3>
-          <p class="text-gray-600 mb-2">Classic cinnamon roll</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/pull_apart_cinnamon_roll.jpg" alt="Pull Apart Cinnamon Roll" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Pull Apart Cinnamon Roll</h3>
-          <p class="text-gray-600 mb-2">Pull apart style cinnamon roll</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
       </div>
-    </section>
+      <!-- Add more donut items here -->
+    </div>
+  </section>
 
-    <!-- Drinks Section -->
-    <section id="drinks">
-      <h2 class="text-3xl font-bold text-purple-700 mb-6">Drinks</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  <!-- Breakfast Section -->
+  <section class="max-w-6xl mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold text-purple-800 mb-6">🍳 Breakfast</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Breakfast Item Template -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="/images/breakfast-placeholder.jpg" alt="Breakfast" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Biscuit Sandwich (Bacon)</h3>
+          <p class="text-gray-600 mb-3">Warm biscuit with crispy bacon and egg.</p>
+          <p class="font-bold text-purple-700">$3.50</p>
+        </div>
+      </div>
+      <!-- Add more breakfast items here -->
+    </div>
+  </section>
 
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/milk_tea.jpg" alt="Milk Tea" class="rounded-md mb-3 w-full h-40 object-cover" />
+  <!-- Drinks Section -->
+  <section class="max-w-6xl mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold text-purple-800 mb-6">🥤 Drinks</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Drink Item Template -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="/images/drink-placeholder.jpg" alt="Drink" class="w-full h-48 object-cover">
+        <div class="p-4">
           <h3 class="text-xl font-semibold">Milk Tea</h3>
-          <p class="text-gray-600 mb-2">Classic bubble tea style</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
+          <p class="text-gray-600 mb-3">Classic sweet milk tea served chilled.</p>
+          <p class="font-bold text-purple-700">$3.25</p>
         </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/fruit_tea.jpg" alt="Fruit Tea" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Fruit Tea</h3>
-          <p class="text-gray-600 mb-2">Refreshing fruit-flavored tea</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/smoothie_slushie.jpg" alt="Smoothie / Slushie" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Smoothies / Slushies</h3>
-          <p class="text-gray-600 mb-2">Cool and refreshing</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/coffee.jpg" alt="Coffee" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Coffee</h3>
-          <p class="text-gray-600 mb-2">Fresh brewed coffee</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/hot_flavored_coffee.jpg" alt="Hot Flavored Coffee" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Hot Flavored Coffee</h3>
-          <p class="text-gray-600 mb-2">Flavored hot coffee drinks</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-4">
-          <img src="images/iced_coffee.jpg" alt="Iced Coffee" class="rounded-md mb-3 w-full h-40 object-cover" />
-          <h3 class="text-xl font-semibold">Iced Coffee</h3>
-          <p class="text-gray-600 mb-2">Chilled coffee drinks</p>
-          <a href="https://www.doordash.com/store/yummy-donut-palace" target="_blank" class="inline-block px-4 py-2 bg-yellow-400 text-purple-800 font-semibold rounded hover:bg-yellow-300">Order on DoorDash</a>
-        </div>
-
       </div>
-    </section>
+      <!-- Add more drink items here -->
+    </div>
+  </section>
 
-  </main>
-
+  <!-- Optional DoorDash Link -->
+  <section class="max-w-6xl mx-auto px-4 py-8 text-center">
+    <p class="text-lg text-gray-700">Want delivery instead?</p>
+    <a href="https://www.doordash.com/store/YOUR_STORE_LINK" target="_blank" class="inline-block mt-2 bg-purple-700 text-white px-6 py-3 rounded-lg hover:bg-purple-900">
+      Order on DoorDash (Optional)
+    </a>
+  </section>
 </body>
 </html>
-
