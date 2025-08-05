@@ -1,72 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Yummy Donut Palace</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  </head>
-  <body class="bg-purple-50 text-gray-800">
-    <!-- Navbar -->
-    <nav class="bg-purple-600 text-white p-4">
-      <div class="container mx-auto flex justify-between items-center">
-        <a href="index.html" class="text-2xl font-bold">Yummy Donut Palace</a>
-        <ul class="flex space-x-4">
-          <li><a href="index.html" class="hover:underline">Home</a></li>
-          <li><a href="menu.html" class="hover:underline">Menu</a></li>
-          <li><a href="merch.html" class="hover:underline">Merch</a></li>
-          <li><a href="contact.html" class="hover:underline font-bold">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Yummy Donut Palace</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-purple-50 text-gray-800">
 
-    <!-- Main Section -->
-    <main class="container mx-auto p-6 space-y-12">
-      <!-- Contact Info -->
-      <section>
-        <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
-        <p class="mb-2">📍 Visit us at our pickup location below.</p>
-        <p class="mb-2">📧 Email: <a href="mailto:eddisoning33@gmail.com" class="text-purple-600 underline">eddisoning33@gmail.com</a></p>
-      </section>
+  <!-- Navigation -->
+  <nav class="bg-purple-600 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Yummy Donut Palace</h1>
+      <ul class="flex space-x-4">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="menu.html" class="hover:underline">Menu</a></li>
+        <li><a href="contact.html" class="underline font-semibold">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-      <!-- Google Map -->
-      <section>
-        <iframe
-          class="w-full h-64 rounded-lg shadow"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.905511558474!2d-94.4155!3d39.0911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f6c2d6be6bcb%3A0xabcdef1234567890!2sYummy%20Donut%20Palace!5e0!3m2!1sen!2sus!4v00000000000"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-      </section>
+  <!-- Contact Section -->
+  <section class="container mx-auto px-4 py-10">
+    <h2 class="text-3xl font-bold text-purple-700 mb-6">Contact Us</h2>
+    <p class="mb-4">Email us at: <a href="mailto:eddisoning33@gmail.com" class="text-blue-600 underline">eddisoning33@gmail.com</a></p>
 
-      <!-- Contact Form -->
-      <section>
-        <h3 class="text-2xl font-semibold mb-4">Send Us a Message</h3>
-        <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input type="text" placeholder="Your Name" class="p-3 border rounded" />
-          <input type="email" placeholder="Your Email" class="p-3 border rounded" />
-          <textarea placeholder="Your Message" class="p-3 border rounded md:col-span-2 h-32"></textarea>
-          <button type="submit" class="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700 md:col-span-2">Send Message</button>
-        </form>
-      </section>
+    <!-- Google Map Embed -->
+    <div class="mb-8">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3090.084917563704!2d-94.4155!3d39.0911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0e9c4c4f00b8d%3A0x0000000000000000!2sYummy%20Donut%20Palace!5e0!3m2!1sen!2sus!4v0000000000000"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        class="rounded shadow"
+      ></iframe>
+    </div>
 
-      <!-- Hiring Section -->
-      <section>
-        <h3 class="text-2xl font-semibold mb-4">We're Hiring!</h3>
-        <p class="mb-2">Join the Yummy Donut Palace family. We're always looking for friendly and hardworking people to help us serve the best donuts in town!</p>
-        <form class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-          <input type="text" placeholder="Your Name" class="p-3 border rounded" />
-          <input type="email" placeholder="Your Email" class="p-3 border rounded" />
-          <input type="text" placeholder="What role are you interested in?" class="p-3 border rounded md:col-span-2" />
-          <textarea placeholder="Tell us a bit about yourself..." class="p-3 border rounded md:col-span-2 h-32"></textarea>
-          <button type="submit" class="bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600 md:col-span-2">Apply Now</button>
-        </form>
-      </section>
-    </main>
+    <!-- Hiring Section -->
+    <div class="bg-yellow-100 border-l-4 border-yellow-500 p-6 rounded-lg">
+      <h3 class="text-2xl font-semibold mb-2 text-yellow-800">We're Hiring!</h3>
+      <p class="mb-1"><strong>Position:</strong> Cashier</p>
+      <p class="mb-1"><strong>Pay:</strong> $0.00/hr (temporary placeholder)</p>
+      <p class="mb-2"><strong>To Apply:</strong> Call us at <span class="font-medium text-purple-700">(555) 123-4567</span></p>
+      <p class="text-sm text-gray-600">More roles will be available soon. Stay tuned!</p>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-purple-600 text-white text-center py-4 mt-12">
-      © 2025 Yummy Donut Palace. All rights reserved.
-    </footer>
-  </body>
+  <!-- Footer -->
+  <footer class="bg-purple-600 text-white text-center py-4 mt-10">
+    <p>&copy; 2025 Yummy Donut Palace. All rights reserved.</p>
+  </footer>
+
+</body>
 </html>
