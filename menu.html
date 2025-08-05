@@ -1,75 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu - Yummy Donut Palace</title>
   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-purple-600 p-4 text-white flex justify-between">
+    <div class="text-lg font-bold">Yummy Donut Palace</div>
+    <div class="space-x-4">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="menu.html" class="underline font-semibold">Menu</a>
+      <a href="merch.html" class="hover:underline">Merch</a>
+      <a href="location.html" class="hover:underline">Location</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Location Section -->
+  <section class="p-4">
+    <h2 class="text-2xl font-bold mb-2">Pickup Location</h2>
+    <div class="w-full h-64">
+      <iframe class="w-full h-full rounded" frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Yummy+Donut+Palace,Independence+MO" allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Menu Categories -->
+  <section class="p-4">
+    <div class="flex space-x-4 mb-6">
+      <button onclick="showCategory('donuts')" class="bg-purple-500 text-white px-4 py-2 rounded">Donuts</button>
+      <button onclick="showCategory('breakfast')" class="bg-purple-500 text-white px-4 py-2 rounded">Breakfast</button>
+      <button onclick="showCategory('drinks')" class="bg-purple-500 text-white px-4 py-2 rounded">Drinks</button>
+    </div>
+
+    <!-- Donuts Section -->
+    <div id="donuts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="border p-4 rounded shadow">
+        <img src="images/glazed-donut.jpg" alt="Glazed Donut" class="w-full h-40 object-cover mb-2">
+        <h3 class="font-bold">Glazed Donut</h3>
+        <p>$0.00</p>
+      </div>
+      <div class="border p-4 rounded shadow">
+        <img src="images/icing-donut.jpg" alt="Icing Donut" class="w-full h-40 object-cover mb-2">
+        <h3 class="font-bold">Icing Donut (Pink, White, Chocolate)</h3>
+        <p>$0.00</p>
+      </div>
+      <div class="border p-4 rounded shadow">
+        <img src="images/old-fashioned.jpg" alt="Old Fashioned Donut" class="w-full h-40 object-cover mb-2">
+        <h3 class="font-bold">Old Fashioned Donut</h3>
+        <p>$0.00</p>
+      </div>
+      <!-- Add more donut items here... -->
+    </div>
+
+    <!-- Breakfast Section -->
+    <div id="breakfast" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 hidden">
+      <div class="border p-4 rounded shadow">
+        <img src="images/bacon-croissant.jpg" alt="Bacon Croissant Sandwich" class="w-full h-40 object-cover mb-2">
+        <h3 class="font-bold">Bacon Croissant Sandwich</h3>
+        <p>$0.00</p>
+      </div>
+      <div class="border p-4 rounded shadow">
+        <img src="images/sausage-roll.jpg" alt="Sausage Roll" class="w-full h-40 object-cover mb-2">
+        <h3 class="font-bold">Sausage Roll (Regular or Spicy)</h3>
+        <p>$0.00</p>
+      </div>
+      <div class="border p-4 rounded shadow">
+        <img src="images/breakfast-burrito.jpg" alt="Breakfast Burrito" class="w-full h-40 object-cover mb-2">
+        <h3 class="font-bold">Breakfast Burrito (Bacon or Sausage)</h3>
+        <p>$0.00</p>
+      </div>
+      <!-- Add more breakfast items here... -->
+    </div>
+
+    <!-- Drinks Section -->
+    <div id="drinks" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 hidden">
+      <div class="border p-4 rounded shadow">
+        <img src="images/milk-tea.jpg" alt="Milk Tea" class="w-full h-40 object-cover mb-2">
+        <h3 class="font-bold">Milk Tea</h3>
+        <p>$0.00</p>
+      </div>
+      <div class="border p-4 rounded shadow">
+        <img src="images/iced-coffee.jpg" alt="Iced Coffee" class="w-full h-40 object-cover mb-2">
+        <h3 class="font-bold">Iced Coffee</h3>
+        <p>$0.00</p>
+      </div>
+      <div class="border p-4 rounded shadow">
+        <img src="images/smoothie.jpg" alt="Smoothie" class="w-full h-40 object-cover mb-2">
+        <h3 class="font-bold">Smoothie / Slushie</h3>
+        <p>$0.00</p>
+      </div>
+      <!-- Add more drink items here... -->
+    </div>
+  </section>
+
   <script>
     function showCategory(category) {
-      const categories = ["donuts", "breakfast", "drinks"];
-      categories.forEach(cat => {
-        document.getElementById(cat).classList.add("hidden");
-      });
-      document.getElementById(category).classList.remove("hidden");
+      document.getElementById('donuts').style.display = 'none';
+      document.getElementById('breakfast').style.display = 'none';
+      document.getElementById('drinks').style.display = 'none';
+      document.getElementById(category).style.display = 'grid';
     }
   </script>
-</head>
-<body class="bg-purple-100 font-sans">
-  <div class="container mx-auto p-4">
-    <h1 class="text-4xl font-bold text-center text-purple-900 mb-6">Our Menu</h1>
-    <div class="flex justify-center space-x-4 mb-6">
-      <button onclick="showCategory('donuts')" class="bg-yellow-400 hover:bg-yellow-500 text-white px-4 py-2 rounded">Donuts</button>
-      <button onclick="showCategory('breakfast')" class="bg-yellow-400 hover:bg-yellow-500 text-white px-4 py-2 rounded">Breakfast</button>
-      <button onclick="showCategory('drinks')" class="bg-yellow-400 hover:bg-yellow-500 text-white px-4 py-2 rounded">Drinks</button>
-    </div>
-
-    <!-- Donuts -->
-    <div id="donuts">
-      <h2 class="text-2xl font-bold text-purple-800 mb-4">Donuts</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="bg-white p-4 rounded shadow">Old Fashioned</div>
-        <div class="bg-white p-4 rounded shadow">Cake Donut</div>
-        <div class="bg-white p-4 rounded shadow">Blueberry Donut</div>
-        <div class="bg-white p-4 rounded shadow">Dark Chocolate Cake</div>
-        <div class="bg-white p-4 rounded shadow">Long Johns</div>
-        <div class="bg-white p-4 rounded shadow">Glazed Donut</div>
-        <div class="bg-white p-4 rounded shadow">Icing Donut (Pink, White, Chocolate)</div>
-        <div class="bg-white p-4 rounded shadow">Bismarck (Filled Donuts)</div>
-        <div class="bg-white p-4 rounded shadow">Donut Holes</div>
-        <div class="bg-white p-4 rounded shadow">Apple Fritter</div>
-        <div class="bg-white p-4 rounded shadow">Twist Donuts</div>
-        <div class="bg-white p-4 rounded shadow">Cinnamon Roll</div>
-        <div class="bg-white p-4 rounded shadow">Pull-Apart Cinnamon Roll</div>
-      </div>
-    </div>
-
-    <!-- Breakfast -->
-    <div id="breakfast" class="hidden">
-      <h2 class="text-2xl font-bold text-purple-800 mb-4">Breakfast</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="bg-white p-4 rounded shadow">Croissant Sandwich (Bacon, Sausage, Ham, Turkey)</div>
-        <div class="bg-white p-4 rounded shadow">Breakfast Burrito (Bacon, Sausage)</div>
-        <div class="bg-white p-4 rounded shadow">Biscuit Sandwich (Bacon, Sausage)</div>
-        <div class="bg-white p-4 rounded shadow">Bacon-Sausage Burger</div>
-        <div class="bg-white p-4 rounded shadow">Cherry-Filled Croissant</div>
-        <div class="bg-white p-4 rounded shadow">Sausage Roll (Regular, Spicy)</div>
-      </div>
-    </div>
-
-    <!-- Drinks -->
-    <div id="drinks" class="hidden">
-      <h2 class="text-2xl font-bold text-purple-800 mb-4">Drinks</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="bg-white p-4 rounded shadow">Milk Tea</div>
-        <div class="bg-white p-4 rounded shadow">Fruit Tea</div>
-        <div class="bg-white p-4 rounded shadow">Smoothie / Slushie</div>
-        <div class="bg-white p-4 rounded shadow">Coffee</div>
-        <div class="bg-white p-4 rounded shadow">Hot Flavored Coffee</div>
-        <div class="bg-white p-4 rounded shadow">Iced Coffee</div>
-      </div>
-    </div>
-  </div>
 </body>
+
 </html>
 
