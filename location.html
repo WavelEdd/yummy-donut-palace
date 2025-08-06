@@ -3,110 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Location - Yummy Donut Palace</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #2b063d; /* Dark purple */
-      color: white;
-    }
-
-    nav {
-      background-color: #4b0082; /* Indigo purple */
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #00bfff; /* Light blue accent */
-    }
-
-    .container {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h1 {
-      color: #ffcc00; /* Yellow title */
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .map-container {
-      width: 100%;
-      height: 400px;
-      margin-bottom: 2rem;
-    }
-
-    .hours {
-      background-color: #3b0a4d; /* Deeper purple */
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .hours h2 {
-      color: #00bfff; /* Blue */
-    }
-
-    .hours p {
-      font-size: 1.1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #4b0082;
-      margin-top: 2rem;
-    }
-  </style>
+  <title>Our Locations – Yummy Donut Palace</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-purple-950 text-white font-sans">
 
-  <nav>
-    <div><a href="index.html">Home</a></div>
-    <div>
-      <a href="menu.html">Menu</a>
-      <a href="merch.html">Merch</a>
-      <a href="location.html">Location</a>
-      <a href="contact.html">Contact</a>
-    </div>
+  <!-- Navigation Bar -->
+  <nav class="bg-purple-800 p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-white">Yummy Donut Palace</h1>
+    <ul class="flex gap-6 text-lg">
+      <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+      <li><a href="menu.html" class="hover:text-yellow-300">Menu</a></li>
+      <li><a href="merch.html" class="hover:text-yellow-300">Merch</a></li>
+      <li><a href="location.html" class="text-yellow-300 underline">Location</a></li>
+      <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+    </ul>
   </nav>
 
-  <div class="container">
-    <h1>Visit Yummy Donut Palace!</h1>
+  <!-- Page Heading -->
+  <section class="text-center mt-10 px-4">
+    <h2 class="text-3xl font-bold text-white mb-2">Our Locations</h2>
+    <p class="text-gray-300">Too lazy to search Google Maps? Just scroll down and there you go 👇</p>
+  </section>
 
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3091.555967968915!2d-94.41908498464374!3d39.0911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f05fc10e3a2f%3A0x5f5e1f913322e9a!2sIndependence%2C%20MO!5e0!3m2!1sen!2sus!4vXXXXXXXXXX"
-        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
+  <!-- Location Addresses -->
+  <section class="mt-10 px-6 max-w-3xl mx-auto space-y-6">
+
+    <div class="bg-purple-800 p-6 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-2">Main Independence Location</h3>
+      <p>123 Main Street<br>Independence, MO 64050</p>
+      <p class="text-sm text-gray-300 mt-2">Open: Mon–Sun, 5 AM – 2 PM</p>
     </div>
 
-    <div class="hours">
-      <h2>Store Hours</h2>
-      <p>Monday – Friday: 5:00 AM – 12:00 PM</p>
-      <p>Saturday – Sunday: 6:00 AM – 1:00 PM</p>
+    <div class="bg-purple-800 p-6 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-2">Kansas City Location</h3>
+      <p>456 Donut Drive<br>Kansas City, MO 64111</p>
+      <p class="text-sm text-gray-300 mt-2">Open: Mon–Fri, 6 AM – 12 PM</p>
     </div>
-  </div>
 
-  <footer>
-    &copy; 2025 Yummy Donut Palace. All rights reserved.
+    <div class="bg-purple-800 p-6 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-2">Lee's Summit Location</h3>
+      <p>789 Sweet St<br>Lee's Summit, MO 64086</p>
+      <p class="text-sm text-gray-300 mt-2">Open: Sat–Sun, 7 AM – 1 PM</p>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-400 mt-12 mb-6">
+    © 2025 Yummy Donut Palace. All rights reserved.
   </footer>
 
 </body>
 </html>
+
 
 
 
