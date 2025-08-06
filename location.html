@@ -1,63 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Location | Yummy Donut Palace</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="bg-purple-100 text-gray-800">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Location - Yummy Donut Palace</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2b063d; /* Dark purple */
+      color: white;
+    }
 
-  <!-- Navbar -->
-  <nav class="bg-purple-700 text-white p-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold">Yummy Donut Palace</h1>
-    <div class="space-x-4">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="menu.html" class="hover:underline">Menu</a>
-      <a href="merch.html" class="hover:underline">Merch</a>
-      <a href="location.html" class="hover:underline font-bold">Location</a>
-      <a href="contact.html" class="hover:underline">Contact</a>
+    nav {
+      background-color: #4b0082; /* Indigo purple */
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #00bfff; /* Light blue accent */
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #ffcc00; /* Yellow title */
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 400px;
+      margin-bottom: 2rem;
+    }
+
+    .hours {
+      background-color: #3b0a4d; /* Deeper purple */
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .hours h2 {
+      color: #00bfff; /* Blue */
+    }
+
+    .hours p {
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #4b0082;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div><a href="index.html">Home</a></div>
+    <div>
+      <a href="menu.html">Menu</a>
+      <a href="merch.html">Merch</a>
+      <a href="location.html">Location</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
-  <!-- Location Content -->
-  <section class="p-6 max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-semibold mb-4">📍 Find Us Here!</h2>
-    <p class="mb-2">Yummy Donut Palace</p>
-    <p class="mb-4">Independence, MO 64055</p>
+  <div class="container">
+    <h1>Visit Yummy Donut Palace!</h1>
 
-    <!-- Google Maps -->
-    <div class="mb-6">
+    <div class="map-container">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3090.7266204021584!2d-94.41921568463617!3d39.0910593795398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0fbe94be6f30d%3A0x8f17e14a3d4a8c48!2sIndependence%2C%20MO!5e0!3m2!1sen!2sus!4v1691074601031!5m2!1sen!2sus"
-        width="100%"
-        height="400"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3091.555967968915!2d-94.41908498464374!3d39.0911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f05fc10e3a2f%3A0x5f5e1f913322e9a!2sIndependence%2C%20MO!5e0!3m2!1sen!2sus!4vXXXXXXXXXX"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
       </iframe>
     </div>
 
-    <!-- Pickup Note -->
-    <p class="text-red-600 font-semibold mb-4">Pickup Only – We serve fresh! No delivery.</p>
-
-    <!-- Hours -->
-    <div class="mb-6">
-      <h3 class="text-xl font-bold mb-2">⏰ Hours</h3>
-      <ul class="text-left inline-block">
-        <li>Mon–Fri: 5:00 AM – 12:00 PM</li>
-        <li>Saturday: 5:00 AM – 1:00 PM</li>
-        <li>Sunday: Closed</li>
-      </ul>
+    <div class="hours">
+      <h2>Store Hours</h2>
+      <p>Monday – Friday: 5:00 AM – 12:00 PM</p>
+      <p>Saturday – Sunday: 6:00 AM – 1:00 PM</p>
     </div>
+  </div>
 
-    <!-- Contact Reminder -->
-    <p class="text-sm">
-      Need help? <a href="contact.html" class="text-purple-700 underline">Contact us here</a>.
-    </p>
-  </section>
+  <footer>
+    &copy; 2025 Yummy Donut Palace. All rights reserved.
+  </footer>
 
 </body>
 </html>
+
+
 
