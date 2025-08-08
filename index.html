@@ -1,126 +1,77 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yummy Donut Palace</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #6b21a8 0%, #9333ea 100%);
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    .spiky-bg {
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    }
+  </style>
 </head>
-<body class="bg-purple-50 text-gray-900">
-
-  <!-- Navigation -->
-  <nav class="bg-purple-700 sticky top-0 z-50 text-white shadow-md">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-      <a href="index.html" class="flex items-center space-x-3">
-        <img src="images/Yummy dount shop Logo.png" alt="Yummy Donut Palace Logo" class="h-10 w-10 rounded-full shadow-md">
-        <span class="text-2xl font-bold hover:text-yellow-400">Yummy Donut Palace</span>
-      </a>
-      <div class="space-x-8 text-lg">
-        <a href="index.html" class="hover:text-yellow-400">Home</a>
-        <a href="menu.html" class="hover:text-yellow-400">Menu</a>
-        <a href="merch.html" class="hover:text-yellow-400">Merch</a>
-        <a href="location.html" class="hover:text-yellow-400">Location</a>
-        <a href="contact.html" class="hover:text-yellow-400">Contact</a>
-      </div>
-    </div>
+<body class="text-white font-sans spiky-bg">
+  <!-- Navbar -->
+  <nav class="bg-purple-800 bg-opacity-90 p-4 shadow-md flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Yummy Donut Palace</h1>
+    <ul class="flex space-x-4">
+      <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+      <li><a href="menu.html" class="hover:text-yellow-300">Menu</a></li>
+      <li><a href="merch.html" class="hover:text-yellow-300">Merch</a></li>
+      <li><a href="location.html" class="hover:text-yellow-300">Location</a></li>
+      <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+    </ul>
   </nav>
 
-
   <!-- Hero Section -->
-  <section class="flex flex-col items-center justify-center text-center mt-20 px-4 max-w-4xl mx-auto">
-    <h1 class="text-5xl font-extrabold text-purple-800 mb-6">Welcome to Yummy Donut Palace</h1>
-    <p class="text-xl text-purple-700 mb-8 max-w-xl">
-      Freshly baked donuts, delicious breakfast, and refreshing drinks — all in one place.
-    </p>
-    <a href="menu.html" class="bg-yellow-400 text-purple-900 font-semibold px-8 py-4 rounded-lg shadow-md hover:bg-yellow-300 transition">
-      Explore Our Menu
-    </a>
+  <section class="text-center py-20 px-4">
+    <h2 class="text-4xl font-extrabold mb-4">Start Your Day the Yummy Way!</h2>
+    <p class="text-lg">Fresh, handcrafted donuts and breakfast served daily.</p>
+    <a href="menu.html" class="mt-6 inline-block bg-yellow-400 text-purple-900 font-bold py-2 px-6 rounded-full hover:bg-yellow-300 transition">Explore Menu</a>
   </section>
 
   <!-- About Section -->
-  <section class="max-w-5xl mx-auto mt-20 px-6">
-    <h2 class="text-3xl font-bold text-purple-700 mb-6 text-center">About Us</h2>
-    <p class="text-center text-gray-700 leading-relaxed max-w-3xl mx-auto">
-      Yummy Donut Palace has been serving the Independence community with freshly baked donuts, hearty breakfast options, and refreshing drinks for years. We take pride in quality, taste, and customer happiness. Come visit us or order online!
-    </p>
-  </section>
-
-  <!-- Merch Preview Section -->
-  <section class="max-w-5xl mx-auto mt-20 px-6">
-    <h2 class="text-3xl font-bold text-purple-700 mb-6 text-center">Merchandise</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-      <!-- Placeholder Merch Items -->
-      <div class="bg-white rounded-xl shadow-md p-4 text-center">
-        <img src="images/merch1.jpg" alt="Yummy Donut Palace T-shirt" class="rounded-md mx-auto mb-3 w-40 h-40 object-cover" />
-        <h3 class="font-semibold text-lg mb-2">T-Shirt</h3>
-        <p class="text-gray-600 mb-3">$20.00</p>
-        <a href="merch.html" class="text-yellow-400 hover:text-yellow-500 font-semibold">Shop Now</a>
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-4 text-center">
-        <img src="images/merch2.jpg" alt="Donut Hat" class="rounded-md mx-auto mb-3 w-40 h-40 object-cover" />
-        <h3 class="font-semibold text-lg mb-2">Donut Hat</h3>
-        <p class="text-gray-600 mb-3">$15.00</p>
-        <a href="merch.html" class="text-yellow-400 hover:text-yellow-500 font-semibold">Shop Now</a>
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-4 text-center">
-        <img src="images/merch3.jpg" alt="Coffee Mug" class="rounded-md mx-auto mb-3 w-40 h-40 object-cover" />
-        <h3 class="font-semibold text-lg mb-2">Coffee Mug</h3>
-        <p class="text-gray-600 mb-3">$12.00</p>
-        <a href="merch.html" class="text-yellow-400 hover:text-yellow-500 font-semibold">Shop Now</a>
-      </div>
+  <section class="px-6 py-16 bg-purple-900 bg-opacity-70">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-4">About Us</h3>
+      <p class="text-lg">Family-owned and operated, Yummy Donut Palace has been serving happiness in a box since day one. We believe in good vibes, fresh flavors, and supporting our local community.</p>
     </div>
   </section>
 
-  <!-- Reviews Section -->
-  <!-- Subscription Section -->
-  <section style="background-color: #f3e8ff; padding: 3rem 1rem;">
-  <h2 style="text-align: center; font-size: 2.5rem; color: #5b21b6;">Subscribe & Save</h2>
-
-  <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;">
-    <!-- Regular Plan -->
-    <div style="background: white; border: 2px solid #d8b4fe; border-radius: 1rem; padding: 1.5rem; width: 300px;">
-      <h3 style="font-size: 1.5rem; color: #7e22ce;">Regular Plan</h3>
-      <p>$5/month</p>
-      <ul style="margin-top: 1rem;">
-        <li>✅ 10% off all orders</li>
-        <li>✅ Free drink with $15+ purchase</li>
-        <li>✅ Buy 1 Get 1 Free drink (1 per visit)</li>
-        <li>✅ Skip-the-line pickup</li>
-      </ul>
-      <button style="margin-top: 1.5rem; width: 100%; background: #7c3aed; color: white; padding: 0.5rem; border: none; border-radius: 0.5rem;">
-        Subscribe Now
-      </button>
+  <!-- Merch Preview -->
+  <section class="px-6 py-16">
+    <div class="max-w-5xl mx-auto">
+      <h3 class="text-3xl font-semibold text-center mb-8">Donut Miss Our Merch!</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white text-purple-900 p-4 rounded-lg shadow-md">
+          <img src="https://via.placeholder.com/150" alt="Shirt" class="w-full rounded mb-2">
+          <h4 class="text-xl font-bold">Yummy Shirt</h4>
+        </div>
+        <div class="bg-white text-purple-900 p-4 rounded-lg shadow-md">
+          <img src="https://via.placeholder.com/150" alt="Mug" class="w-full rounded mb-2">
+          <h4 class="text-xl font-bold">Yummy Mug</h4>
+        </div>
+        <div class="bg-white text-purple-900 p-4 rounded-lg shadow-md">
+          <img src="https://via.placeholder.com/150" alt="Hat" class="w-full rounded mb-2">
+          <h4 class="text-xl font-bold">Yummy Hat</h4>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="merch.html" class="bg-yellow-400 text-purple-900 font-bold py-2 px-6 rounded-full hover:bg-yellow-300 transition">Shop Now</a>
+      </div>
     </div>
-
-    <!-- VIP Plan -->
-    <div style="background: white; border: 2px solid #fde68a; border-radius: 1rem; padding: 1.5rem; width: 300px;">
-      <h3 style="font-size: 1.5rem; color: #ca8a04;">VIP Plan</h3>
-      <p>$10/month</p>
-      <ul style="margin-top: 1rem;">
-        <li>✅ All Regular perks</li>
-        <li>✅ 15% off all orders</li>
-        <li>✅ BOGO drink & pastry (1 per visit)</li>
-        <li>✅ Priority pickup</li>
-        <li>✨ Vote on new menu ideas (coming soon)</li>
-      </ul>
-      <button style="margin-top: 1.5rem; width: 100%; background: #facc15; color: black; padding: 0.5rem; border: none; border-radius: 0.5rem;">
-        Subscribe Now
-      </button>
-    </div>
-  </div>
-
-  <p style="text-align: center; font-size: 0.9rem; color: #4b5563; margin-top: 2rem;">
-    Show your code at checkout to redeem your perks. Cancel anytime.
-  </p>
-</section>
-
+  </section>
 
   <!-- Footer -->
-  <footer class="bg-purple-700 text-white mt-20 py-8 text-center">
+  <footer class="bg-purple-800 text-center py-4">
     <p>&copy; 2025 Yummy Donut Palace. All rights reserved.</p>
-    <p class="mt-2">Email: <a href="mailto:eddisoning33@gmail.com" class="underline hover:text-yellow-400">eddisoning33@gmail.com</a></p>
   </footer>
-
 </body>
 </html>
 
