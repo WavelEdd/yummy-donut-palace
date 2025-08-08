@@ -1,79 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yummy Donut Palace</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
-  <style>
-    body {
-      background: linear-gradient(135deg, #6b21a8 0%, #9333ea 100%);
-      background-attachment: fixed;
-      background-size: cover;
-    }
-    .spiky-bg {
-      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="text-white font-sans spiky-bg">
-  <!-- Navbar -->
-  <nav class="bg-purple-800 bg-opacity-90 p-4 shadow-md flex justify-between items-center">
-    <h1 class="text-2xl font-bold">Yummy Donut Palace</h1>
-    <ul class="flex space-x-4">
-      <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
-      <li><a href="menu.html" class="hover:text-yellow-300">Menu</a></li>
-      <li><a href="merch.html" class="hover:text-yellow-300">Merch</a></li>
-      <li><a href="location.html" class="hover:text-yellow-300">Location</a></li>
-      <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
-    </ul>
+<body class="bg-white text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-purple-700 text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Yummy Donut Palace</h1>
+      <ul class="flex space-x-6 text-lg">
+        <li><a href="index.html" class="underline">Home</a></li>
+        <li><a href="menu.html" class="hover:underline">Menu</a></li>
+        <li><a href="merch.html" class="hover:underline">Merch</a></li>
+        <li><a href="location.html" class="hover:underline">Location</a></li>
+        <li><a href="contact.html" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="text-center py-20 px-4">
-    <h2 class="text-4xl font-extrabold mb-4">Start Your Day the Yummy Way!</h2>
-    <p class="text-lg">Fresh, handcrafted donuts and breakfast served daily.</p>
-    <a href="menu.html" class="mt-6 inline-block bg-yellow-400 text-purple-900 font-bold py-2 px-6 rounded-full hover:bg-yellow-300 transition">Explore Menu</a>
-  </section>
-
-  <!-- About Section -->
-  <section class="px-6 py-16 bg-purple-900 bg-opacity-70">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-semibold mb-4">About Us</h3>
-      <p class="text-lg">Family-owned and operated, Yummy Donut Palace has been serving happiness in a box since day one. We believe in good vibes, fresh flavors, and supporting our local community.</p>
+  <section class="bg-gradient-to-r from-purple-600 to-purple-400 text-white py-20">
+    <div class="container mx-auto text-center px-6">
+      <h2 class="text-5xl font-extrabold mb-4">Fresh Donuts, Fresh Mornings</h2>
+      <p class="text-xl mb-6">Your local spot for handcrafted donuts and cozy vibes.</p>
+      <a href="menu.html"
+         class="bg-yellow-400 text-purple-900 px-6 py-3 rounded-full font-bold uppercase hover:bg-yellow-300 transition">Order Now</a>
     </div>
   </section>
 
-  <!-- Merch Preview -->
-  <section class="px-6 py-16">
-    <div class="max-w-5xl mx-auto">
-      <h3 class="text-3xl font-semibold text-center mb-8">Donut Miss Our Merch!</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white text-purple-900 p-4 rounded-lg shadow-md">
-          <img src="https://via.placeholder.com/150" alt="Shirt" class="w-full rounded mb-2">
-          <h4 class="text-xl font-bold">Yummy Shirt</h4>
+  <!-- Category Highlights (like Dunkin’s “menu sections”) -->
+  <section class="container mx-auto py-12 px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-purple-50 rounded-lg shadow px-6 py-8 text-center">
+        <img src="images/donuts_category.jpg" alt="Donuts" class="h-40 w-full object-cover rounded mb-4">
+        <h3 class="text-2xl font-semibold text-purple-700">Donuts</h3>
+      </div>
+      <div class="bg-purple-50 rounded-lg shadow px-6 py-8 text-center">
+        <img src="images/breakfast_category.jpg" alt="Breakfast" class="h-40 w-full object-cover rounded mb-4">
+        <h3 class="text-2xl font-semibold text-purple-700">Breakfast</h3>
+      </div>
+      <div class="bg-purple-50 rounded-lg shadow px-6 py-8 text-center">
+        <img src="images/drinks_category.jpg" alt="Drinks" class="h-40 w-full object-cover rounded mb-4">
+        <h3 class="text-2xl font-semibold text-purple-700">Drinks</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Merch Section -->
+  <section class="bg-purple-100 py-12 px-6">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-bold text-purple-800 mb-6">Check Out Our Merch</h3>
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="bg-white p-4 rounded-lg shadow">
+          <img src="images/shirt.jpg" alt="Yummy Shirt" class="rounded mb-3">
+          <h4 class="font-bold text-purple-700">Donut Shirt</h4>
         </div>
-        <div class="bg-white text-purple-900 p-4 rounded-lg shadow-md">
-          <img src="https://via.placeholder.com/150" alt="Mug" class="w-full rounded mb-2">
-          <h4 class="text-xl font-bold">Yummy Mug</h4>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <img src="images/mug.jpg" alt="Yummy Mug" class="rounded mb-3">
+          <h4 class="font-bold text-purple-700">Coffee Mug</h4>
         </div>
-        <div class="bg-white text-purple-900 p-4 rounded-lg shadow-md">
-          <img src="https://via.placeholder.com/150" alt="Hat" class="w-full rounded mb-2">
-          <h4 class="text-xl font-bold">Yummy Hat</h4>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <img src="images/sticker.jpg" alt="Yummy Sticker" class="rounded mb-3">
+          <h4 class="font-bold text-purple-700">Sticker Pack</h4>
         </div>
       </div>
-      <div class="text-center mt-8">
-        <a href="merch.html" class="bg-yellow-400 text-purple-900 font-bold py-2 px-6 rounded-full hover:bg-yellow-300 transition">Shop Now</a>
+      <div class="mt-6">
+        <a href="merch.html" class="bg-yellow-400 text-purple-900 px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition">View Merch</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-purple-800 text-center py-4">
-    <p>&copy; 2025 Yummy Donut Palace. All rights reserved.</p>
+  <footer class="bg-purple-800 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>© 2025 Yummy Donut Palace</p>
+    </div>
   </footer>
 </body>
 </html>
+
 
 
 
