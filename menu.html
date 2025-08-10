@@ -22,34 +22,17 @@
   </nav>
 
   <!-- Location Section -->
-  <section class="my-8 px-4">
-  <h2 class="text-2xl font-bold text-white text-center mb-4">Pickup Location Preview</h2>
-  <div class="relative max-w-xl mx-auto rounded-lg overflow-hidden shadow-lg">
-    <img id="slideImage" src="images/slide1.jpg" class="w-full h-auto transition-all duration-700 ease-in-out">
-    
-    <!-- Prev Button -->
-    <button onclick="changeSlide(-1)" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-purple-700 hover:bg-purple-900 text-white p-2 rounded-full">
-      ‹
-    </button>
-
-    <!-- Next Button -->
-    <button onclick="changeSlide(1)" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-purple-700 hover:bg-purple-900 text-white p-2 rounded-full">
-      ›
-    </button>
-  </div>
-</section>
-
-<script>
-  const images = ["images/slide1.jpg", "images/slide2.jpg", "images/slide3.jpg"];
-  let currentSlide = 0;
-
-  function changeSlide(direction) {
-    currentSlide = (currentSlide + direction + images.length) % images.length;
-    document.getElementById("slideImage").src = images[currentSlide];
-  }
-
-  setInterval(() => changeSlide(1), 5000);
-</script>
+  <!-- Large Order Button Section -->
+  <section class="bg-gradient-to-r from-purple-600 to-purple-400 text-white py-20">
+    <div class="container mx-auto text-center px-6">
+      <h2 class="text-4xl font-extrabold mb-6">Ready to Order?</h2>
+      <a href="https://www.doordash.com/store/YOUR-SHOP-NAME-HERE"
+         target="_blank"
+         class="bg-yellow-400 text-purple-900 px-10 py-5 rounded-full font-bold uppercase text-2xl hover:bg-yellow-300 transition">
+        Order Now
+      </a>
+    </div>
+  </section>
 
 
   <!-- Menu Categories -->
@@ -219,6 +202,7 @@
 </body>
 
 </html>
+
 
 
 
